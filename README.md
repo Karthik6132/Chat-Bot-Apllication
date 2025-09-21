@@ -1,5 +1,7 @@
 Chat-Bot Application
+
 About The Project
+
 This project details the creation of a full-stack, real-time chat application using the MERN stack (MongoDB, Express.js, React.js, Node.js) with WebSockets. The video emphasizes learning the full-stack development journey and proper production-approachable setup rather than just building a simple chat application. It includes features like user authentication (login/signup), user search, displaying online users, and real-time messaging.
 
 Built With
