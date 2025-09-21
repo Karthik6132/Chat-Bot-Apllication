@@ -4,10 +4,12 @@ About The Project
 
 This project details the creation of a full-stack, real-time chat application using the MERN stack (MongoDB, Express.js, React.js, Node.js) with WebSockets. The video emphasizes learning the full-stack development journey and proper production-approachable setup rather than just building a simple chat application. It includes features like user authentication (login/signup), user search, displaying online users, and real-time messaging.
 
-Built With
+Built With:
+
 The application is built using the following core technologies and libraries:
 
-Frontend
+Frontend:
+
 React.js: For building the user interface.
 
 Vite: As a build tool for a fast development experience.
@@ -28,7 +30,8 @@ Axios: For making HTTP requests to the backend.
 
 Socket.IO Client: For establishing and managing WebSocket connections.
 
-Backend
+Backend:
+
 Node.js: The JavaScript runtime environment.
 
 Express.js: A web application framework for building RESTful APIs.
@@ -51,10 +54,12 @@ Cookie Parser: Middleware for parsing cookies.
 
 Socket.IO Server: For real-time, bidirectional communication using WebSockets.
 
-Getting Started
+Getting Started:
+
 To get a local copy of this project up and running, follow these steps.
 
-Prerequisites
+Prerequisites:
+
 Ensure you have the following installed:
 
 Node.js (LTS version recommended)
@@ -63,7 +68,7 @@ npm (Node Package Manager, usually comes with Node.js)
 
 MongoDB Atlas Account: For setting up your database (free tier is sufficient).
 
-Installation
+Installation:
 Clone the repository:
 
 Bash
