@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import User from "./User";
 import Message from "./Message";
 import { useDispatch, useSelector } from "react-redux";
@@ -15,7 +15,7 @@ const MessageContainer = () => {
     if (selectedUser?._id) {
       dispatch(getMessageThunk({ recieverId: selectedUser?._id }));
     }
-  }, [selectedUser]);
+  }, [dispatch, selectedUser]);
 
   return (
     <>

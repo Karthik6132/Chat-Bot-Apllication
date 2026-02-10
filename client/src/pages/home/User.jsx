@@ -1,4 +1,4 @@
-import React from "react";
+import PropTypes from "prop-types";
 import { useDispatch, useSelector } from "react-redux";
 import { setSelectedUser } from "../../store/slice/user/user.slice";
 
@@ -7,8 +7,8 @@ const User = ({ userDetails }) => {
   const dispatch = useDispatch();
 
   const { selectedUser } = useSelector((state) => state.userReducer);
-  const { onlineUsers } = useSelector(state => state.socketReducer);
-  const isUserOnline = onlineUsers?.includes(userDetails?._id)
+  const { onlineUsers } = useSelector((state) => state.socketReducer);
+  const isUserOnline = onlineUsers?.includes(userDetails?._id);
 
   const handleUserClick = () => {
     dispatch(setSelectedUser(userDetails));
@@ -21,7 +21,7 @@ const User = ({ userDetails }) => {
         userDetails?._id === selectedUser?._id && "bg-gray-700"
       }`}
     >
-      <div className={`avatar ${isUserOnline && 'online'}`}>
+      <div className={`avatar ${isUserOnline && "online"}`}>
         <div className="w-12 rounded-full">
           <img src={userDetails?.avatar} />
         </div>
@@ -32,6 +32,15 @@ const User = ({ userDetails }) => {
       </div>
     </div>
   );
+};
+
+User.propTypes = {
+  userDetails: PropTypes.shape({
+    _id: PropTypes.string,
+    avatar: PropTypes.string,
+    fullName: PropTypes.string,
+    username: PropTypes.string,
+  }).isRequired,
 };
 
 export default User;

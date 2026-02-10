@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { FaUser } from "react-icons/fa";
 import { IoKeySharp } from "react-icons/io5";
 import { Link, useNavigate } from "react-router-dom";
@@ -20,7 +20,7 @@ const Signup = () => {
 
   useEffect(() => {
     if (isAuthenticated) navigate("/");
-  }, [isAuthenticated]);
+  }, [isAuthenticated, navigate]);
 
   const handleInputChange = (e) => {
     setSignupData((prev) => ({

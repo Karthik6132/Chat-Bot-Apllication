@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import UserSidebar from "./UserSidebar";
 import MessageContainer from "./MessageContainer";
 import { useDispatch, useSelector } from "react-redux";
@@ -13,12 +13,12 @@ const Home = () => {
   const { isAuthenticated, userProfile } = useSelector(
     (state) => state.userReducer
   );
-  const { socket, onlineUsers } = useSelector((state) => state.socketReducer);
+  const { socket } = useSelector((state) => state.socketReducer);
 
   useEffect(() => {
     if (!isAuthenticated) return;
     dispatch(initializeSocket(userProfile?._id));
-  }, [isAuthenticated]);
+  }, [dispatch, isAuthenticated, userProfile?._id]);
 
   useEffect(() => {
     if (!socket) return;
@@ -31,7 +31,7 @@ const Home = () => {
     return () => {
       socket.close();
     };
-  }, [socket]);
+  }, [dispatch, socket]);
 
   return (
     <div className="flex">

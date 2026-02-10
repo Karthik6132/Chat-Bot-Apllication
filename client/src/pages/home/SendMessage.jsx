@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { IoIosSend } from "react-icons/io";
 import { useDispatch, useSelector } from "react-redux";
 import { sendMessageThunk } from "../../store/slice/message/message.thunk";

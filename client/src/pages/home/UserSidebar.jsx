@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { IoSearch } from "react-icons/io5";
 import User from "./User";
 import { useDispatch, useSelector } from "react-redux";
@@ -38,7 +38,7 @@ const UserSidebar = () => {
     (async () => {
       await dispatch(getOtherUsersThunk());
     })();
-  }, []);
+  }, [dispatch]);
 
   return (
     <div className="max-w-[20em] w-full h-screen flex flex-col border-r border-r-white/10">
