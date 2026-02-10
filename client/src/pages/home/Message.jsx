@@ -1,4 +1,5 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
+import PropTypes from "prop-types";
 import { useSelector } from "react-redux";
 
 const Message = ({ messageDetails }) => {
@@ -42,6 +43,13 @@ const Message = ({ messageDetails }) => {
       </div>
     </>
   );
+};
+
+Message.propTypes = {
+  messageDetails: PropTypes.shape({
+    senderId: PropTypes.string,
+    message: PropTypes.string,
+  }).isRequired,
 };
 
 export default Message;

@@ -12,7 +12,7 @@ function App() {
     (async () => {
       await dispatch(getUserProfileThunk());
     })();
-  }, []);
+  }, [dispatch]);
 
   return (
     <>

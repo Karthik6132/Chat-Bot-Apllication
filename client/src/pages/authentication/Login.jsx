@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { FaUser } from "react-icons/fa";
 import { IoKeySharp } from "react-icons/io5";
 import { Link, useNavigate } from "react-router-dom";
@@ -16,7 +16,7 @@ const Login = () => {
 
   useEffect(() => {
     if (isAuthenticated) navigate("/");
-  }, [isAuthenticated]);
+  }, [isAuthenticated, navigate]);
 
   const handleInputChange = (e) => {
     setLoginData((prev) => ({
@@ -64,7 +64,7 @@ const Login = () => {
         </button>
 
         <p>
-          Don't have an account? &nbsp;
+          Don&apos;t have an account? &nbsp;
           <Link to="/signup" className="text-blue-400 underline">
             Sign Up
           </Link>
